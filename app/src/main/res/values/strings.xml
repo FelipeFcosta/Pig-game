@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pig Game</string>
+    <string name="btn_roll">Roll</string>
+    <string name="zero">0</string>
+    <string name="score_a">Score A</string>
+    <string name="score_b">Score B</string>
+    <string name="bankText">Bank</string>
+</resources>
