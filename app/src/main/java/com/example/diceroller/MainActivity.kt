@@ -1,10 +1,13 @@
 package com.example.diceroller
 
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -188,13 +191,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             score[player] = 0
             updateScore(score[player], resTxtScores[player])
             
-            // return any green colored points to black
+            // return any green colored points to the original color
             val txtScore: TextView = findViewById(resTxtScores[player])
-            txtScore.setTextColor(ContextCompat.getColor(this, R.color.black))
+            txtScore.setTextColor(getColorFromAttr(R.attr.colorPrimaryText))
         }
     }
-}
 
+    /**
+     * Retrieve color of attribute used in the current theme
+     */
+    @ColorInt
+    private fun getColorFromAttr(
+        @AttrRes attrColor: Int,
+        typedValue: TypedValue = TypedValue()
+    ): Int {
+        theme.resolveAttribute(attrColor, typedValue, true)
+        return typedValue.data
+    }
+}
 
 /**
  * Dice with a fixed number of sides

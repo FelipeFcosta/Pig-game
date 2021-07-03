@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="myBackground" format="color" />
-    <attr name="colorDivider" format="color" />
+    <attr name="colorPrimaryText" format="color" />
+    <attr name="colorSecondaryText" format="color" />
 </resources>

@@ -13,6 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="myBackground">@color/blackish</item>
-        <item name="colorDivider">@color/dark_grey</item>
+        <item name="colorPrimaryText">@color/white</item>
+        <item name="colorSecondaryText">@color/dark_grey</item>
     </style>
 </resources>
